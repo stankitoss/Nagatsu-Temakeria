@@ -222,9 +222,6 @@
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
       --tw-ease: initial;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
       --tw-content: "";
       --tw-animation-delay: 0s;
       --tw-animation-direction: normal;
@@ -633,6 +630,10 @@
     * {
       outline-color: color-mix(in oklab, var(--ring) 50%, transparent);
     }
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
@@ -1079,14 +1080,6 @@
 
   .field-sizing-content {
     field-sizing: content;
-  }
-
-  .aspect-\[4\/3\] {
-    aspect-ratio: 4 / 3;
-  }
-
-  .aspect-\[7\/4\] {
-    aspect-ratio: 7 / 4;
   }
 
   .aspect-square {
@@ -2243,16 +2236,6 @@
     }
   }
 
-  .bg-white\/95 {
-    background-color: #fffffff2;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-white\/95 {
-      background-color: color-mix(in oklab, var(--color-white) 95%, transparent);
-    }
-  }
-
   .bg-gradient-to-br {
     --tw-gradient-position: to bottom right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
@@ -2583,11 +2566,6 @@
 
   .text-\[11px\] {
     font-size: 11px;
-  }
-
-  .leading-\[1\.08\] {
-    --tw-leading: 1.08;
-    line-height: 1.08;
   }
 
   .leading-\[1\.12\] {
@@ -2978,16 +2956,6 @@
     }
   }
 
-  .shadow-slate-900\/10 {
-    --tw-shadow-color: #0f172b1a;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .shadow-slate-900\/10 {
-      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-slate-900) 10%, transparent) var(--tw-shadow-alpha), transparent);
-    }
-  }
-
   .ring-ring {
     --tw-ring-color: var(--ring);
   }
@@ -3211,35 +3179,14 @@
   }
 
   @media (hover: hover) {
-    .group-hover\:scale-105:is(:where(.group):hover *) {
-      --tw-scale-x: 105%;
-      --tw-scale-y: 105%;
-      --tw-scale-z: 105%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
-  }
-
-  @media (hover: hover) {
     .group-hover\:bg-\[\#c8151f\]:is(:where(.group):hover *) {
       background-color: #c8151f;
     }
   }
 
   @media (hover: hover) {
-    .group-hover\:bg-green-100:is(:where(.group):hover *) {
-      background-color: var(--color-green-100);
-    }
-  }
-
-  @media (hover: hover) {
     .group-hover\:text-\[\#EA1D2C\]:is(:where(.group):hover *) {
       color: #ea1d2c;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:text-green-700:is(:where(.group):hover *) {
-      color: var(--color-green-700);
     }
   }
 
@@ -3636,30 +3583,6 @@
     @supports (color: color-mix(in lab, red, red)) {
       .hover\:border-amber-400\/60:hover {
         border-color: color-mix(in oklab, var(--color-amber-400) 60%, transparent);
-      }
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:border-green-600\/40:hover {
-      border-color: #00a54466;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:border-green-600\/40:hover {
-        border-color: color-mix(in oklab, var(--color-green-600) 40%, transparent);
-      }
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:border-green-600\/50:hover {
-      border-color: #00a54480;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:border-green-600\/50:hover {
-        border-color: color-mix(in oklab, var(--color-green-600) 50%, transparent);
       }
     }
   }
@@ -4944,24 +4867,6 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:bottom-5 {
-      bottom: calc(var(--spacing) * 5);
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:left-5 {
-      left: calc(var(--spacing) * 5);
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:left-8 {
-      left: calc(var(--spacing) * 8);
-    }
-  }
-
-  @media (min-width: 40rem) {
     .sm\:mr-1\.5 {
       margin-right: calc(var(--spacing) * 1.5);
     }
@@ -4982,18 +4887,6 @@
   @media (min-width: 40rem) {
     .sm\:inline {
       display: inline;
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:aspect-\[4\/3\] {
-      aspect-ratio: 4 / 3;
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:aspect-\[5\/4\] {
-      aspect-ratio: 5 / 4;
     }
   }
 
@@ -5112,13 +5005,6 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:text-2xl {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-  }
-
-  @media (min-width: 40rem) {
     .sm\:text-3xl {
       font-size: var(--text-3xl);
       line-height: var(--tw-leading, var(--text-3xl--line-height));
@@ -5228,12 +5114,6 @@
   }
 
   @media (min-width: 48rem) {
-    .md\:grid-cols-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (min-width: 48rem) {
     .md\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -5321,18 +5201,6 @@
   }
 
   @media (min-width: 64rem) {
-    .lg\:col-span-2 {
-      grid-column: span 2 / span 2;
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:col-span-3 {
-      grid-column: span 3 / span 3;
-    }
-  }
-
-  @media (min-width: 64rem) {
     .lg\:flex {
       display: flex;
     }
@@ -5341,12 +5209,6 @@
   @media (min-width: 64rem) {
     .lg\:hidden {
       display: none;
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:aspect-\[7\/4\] {
-      aspect-ratio: 7 / 4;
     }
   }
 
@@ -5363,44 +5225,14 @@
   }
 
   @media (min-width: 64rem) {
-    .lg\:h-full {
-      height: 100%;
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:min-h-\[420px\] {
-      min-height: 420px;
-    }
-  }
-
-  @media (min-width: 64rem) {
     .lg\:w-full {
       width: 100%;
     }
   }
 
   @media (min-width: 64rem) {
-    .lg\:columns-3 {
-      columns: 3;
-    }
-  }
-
-  @media (min-width: 64rem) {
     .lg\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:grid-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:grid-cols-5 {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
 
@@ -5502,13 +5334,6 @@
   }
 
   @media (min-width: 64rem) {
-    .lg\:text-6xl {
-      font-size: var(--text-6xl);
-      line-height: var(--tw-leading, var(--text-6xl--line-height));
-    }
-  }
-
-  @media (min-width: 64rem) {
     .lg\:text-\[3\.4rem\] {
       font-size: 3.4rem;
     }
@@ -5517,19 +5342,6 @@
   @media (min-width: 64rem) {
     .lg\:whitespace-normal {
       white-space: normal;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .xl\:grid-cols-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .xl\:text-6xl {
-      font-size: var(--text-6xl);
-      line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
   }
 
@@ -6176,7 +5988,7 @@
   --destructive: #e40014;
   --border: #e5e5e5;
   --input: #e5e5e5;
-  --ring: #a1a1a1;
+  --ring: #16a34a;
   --chart-1: #f05100;
   --chart-2: #009588;
   --chart-3: #104e64;
@@ -6211,7 +6023,7 @@
     --destructive: lab(48.4493% 77.4328 61.5452);
     --border: lab(90.952% 0 -.0000119209);
     --input: lab(90.952% 0 -.0000119209);
-    --ring: lab(66.128% -.0000298023 .0000119209);
+    --ring: lab(58.8299% -51.1058 35.4544);
     --chart-1: lab(57.1026% 64.2584 89.8886);
     --chart-2: lab(55.0223% -41.0774 -3.90277);
     --chart-3: lab(30.372% -13.1853 -18.7887);
@@ -6296,6 +6108,17 @@
     --sidebar-border: lab(100% 0 0 / .1);
     --sidebar-ring: lab(48.496% 0 0);
   }
+}
+
+.dialog-fit {
+  max-height: calc(100dvh - 2rem);
+}
+
+.dialog-scroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 @property --tw-translate-x {
@@ -6662,24 +6485,6 @@
   inherits: false
 }
 
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
 @property --tw-content {
   syntax: "*";
   inherits: false;
@@ -6984,7 +6789,10 @@
 <!-- ===== Modal de delivery ===== -->
 <div id="delivery-dialog" hidden>
   <div id="delivery-overlay" class="fixed inset-0 z-50 bg-black/50" aria-hidden="true"></div>
-  <div role="dialog" aria-modal="true" aria-labelledby="delivery-dialog-title" class="fixed left-1/2 top-1/2 z-50 grid w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-lg sm:p-8">
+  <div role="dialog" aria-modal="true" aria-labelledby="delivery-dialog-title" class="dialog-fit fixed left-1/2 top-1/2 z-50 flex w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-lg sm:p-8">
+    <!-- Conteúdo rolável por dentro no celular — o X (fora desta div) fica
+         sempre visível; no desktop o conteúdo cabe e nada muda. -->
+    <div class="dialog-scroll grid flex-1 gap-4">
     <div class="flex flex-col gap-2 text-center sm:text-left">
       <h2 id="delivery-dialog-title" class="text-2xl font-bold leading-none tracking-tight text-slate-900 sm:text-3xl">Por onde você quer pedir?</h2>
       <p class="text-base text-slate-600">Escolha o aplicativo da sua preferência — no iFood você cai na página de delivery da Nagatsu Temakeria; na Keeta, o app abre direto para você pedir.</p>
@@ -7017,6 +6825,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 shrink-0 text-slate-400" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       <p>Prefere pedir por telefone para retirada? Ligue para <a href="tel:+551135965555" class="font-semibold text-slate-900 underline-offset-2 hover:underline">(11) 3596-5555</a>. Ao escolher um app acima, o app correspondente abre para você finalizar o pedido — na Keeta, sem o app instalado, a loja abre para download.</p>
     </div>
+    </div>
     <button type="button" id="delivery-dialog-close" aria-label="Fechar" class="absolute right-4 top-4 rounded-xs opacity-70 transition-opacity hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg><span class="sr-only">Close</span></button>
   </div>
 </div>
@@ -7027,6 +6836,9 @@
   var DATA = {"menu":[{"title":"Destaques","items":[{"name":"Combo 5 (54 peças)","price":"R$ 120,00","oldPrice":"R$ 160,00"},{"name":"Combo 2 (24 peças)","price":"R$ 74,00","oldPrice":"R$ 90,00"},{"name":"33 · Temaki a escolher (1 opção de temaki)","price":"R$ 54,00","oldPrice":"R$ 63,00"},{"name":"Obento 1 (salmão grelhado)","price":"R$ 51,00","oldPrice":"R$ 59,00"}]},{"title":"Obento","items":[{"name":"Obento 1 (salmão grelhado)","price":"R$ 51,00","oldPrice":"R$ 59,00"},{"name":"Obento 2 (frango empanado)","price":"R$ 44,00","oldPrice":"R$ 49,00"},{"name":"Obento 3 (filé de St. Peter)","price":"R$ 46,00","oldPrice":"R$ 52,00"},{"name":"Obento 4 (guioza)","price":"R$ 44,00","oldPrice":"R$ 50,00"}]},{"title":"Poke","items":[{"name":"Poke A (salmão e atum)","price":"R$ 63,00","oldPrice":"R$ 68,00"},{"name":"Poke B (salmão e camarão)","price":"R$ 63,00","oldPrice":"R$ 68,00"},{"name":"Poke C (salmão, camarão e peixe branco)","price":"R$ 63,00","oldPrice":"R$ 68,00"},{"name":"Poke D (salmão)","price":"R$ 63,00","oldPrice":"R$ 68,00"},{"name":"Poke E (salmão, camarão, atum e peixe branco)","price":"R$ 65,00","oldPrice":"R$ 68,00"}]},{"title":"Combinados de Salmão","items":[{"name":"Combo 1 (28 peças)","price":"R$ 84,00","oldPrice":"R$ 96,00"},{"name":"Combo 2 (24 peças)","price":"R$ 74,00","oldPrice":"R$ 90,00"},{"name":"Combo 3 (24 peças)","price":"R$ 68,90"},{"name":"Combo 4 (20 peças)","price":"R$ 65,90"},{"name":"Combo 5 (54 peças)","price":"R$ 120,00","oldPrice":"R$ 160,00"}]},{"title":"Combinados Diversos","items":[{"name":"Combinado 1 (20 peças)","price":"R$ 69,00","oldPrice":"R$ 79,00"},{"name":"Combinado 2 (18 peças)","price":"R$ 65,00"},{"name":"Combinado 3 (16 peças)","price":"R$ 58,00"},{"name":"Combinado 4 (21 peças)","price":"R$ 68,10","oldPrice":"R$ 78,00"},{"name":"Combinado 5 (31 peças)","price":"R$ 84,00","oldPrice":"R$ 96,00"},{"name":"Combinado 6 (36 peças)","price":"R$ 91,00","oldPrice":"R$ 101,00"}]},{"title":"Temakis","items":[{"name":"01. Salmão","price":"R$ 36,00"},{"name":"02. Salmão especial","price":"R$ 38,00"},{"name":"03. Hot salmão","price":"R$ 36,00"},{"name":"04. Spice salmori","price":"R$ 35,90"},{"name":"05. Salkan","price":"R$ 36,90"},{"name":"06. Califórnia","price":"R$ 29,90"},{"name":"07. Califórnia especial","price":"R$ 34,90"},{"name":"08. Philadelfia","price":"R$ 29,00"},{"name":"09. Salmão skin","price":"R$ 28,00"},{"name":"10. Salmão misto","price":"R$ 35,90"},{"name":"11. Atum","price":"R$ 37,90"},{"name":"12. Atum especial","price":"R$ 38,90"},{"name":"13. Camarão","price":"R$ 39,90"},{"name":"14. Shimeji","price":"R$ 32,90"},{"name":"15. Shi-sa","price":"R$ 36,00"},{"name":"16. Salmão completo","price":"R$ 36,00"},{"name":"17. Hot especial","price":"R$ 37,00"},{"name":"18. Spice","price":"R$ 35,90"},{"name":"19. Salmão Kewpie (maionese japonesa)","price":"R$ 39,00"},{"name":"20. Aranda","price":"R$ 35,00"},{"name":"21. Temakym","price":"R$ 36,90"},{"name":"22. Temaki empanado","price":"R$ 37,00"},{"name":"23. Salmão crispy","price":"R$ 35,90"},{"name":"24. Salmão Ebi Mix","price":"R$ 38,50"},{"name":"25. Salmão Katsu","price":"R$ 37,90"},{"name":"26. Ebi Katsu","price":"R$ 39,00"},{"name":"27. Santen","price":"R$ 37,50"},{"name":"28. Salmão Siciliano","price":"R$ 35,90"},{"name":"29. Salmão Chips","price":"R$ 35,90"}]},{"title":"Hot Roll","items":[{"name":"Hot roll salmão e cream cheese (8 un.)","price":"R$ 37,00","oldPrice":"R$ 40,00"},{"name":"Hot roll shimeji e cream cheese (8 un.)","price":"R$ 33,00","oldPrice":"R$ 38,00"},{"name":"Hot roll skin e cream cheese (8 un.)","price":"R$ 33,00"},{"name":"Hot roll camarão e cream cheese (8 un.)","price":"R$ 40,00","oldPrice":"R$ 44,00"}]},{"title":"Pratos Quentes + Combos Diversos","items":[{"name":"Guioza (6 un.) — carne suína","price":"R$ 32,90"},{"name":"Harumaki (rolinho primavera, 2 un.)","price":"R$ 20,90"},{"name":"Shimeji na manteiga e cebolinha","price":"R$ 28,00"},{"name":"Posta + Shimeji","price":"R$ 59,50"},{"name":"Guioza + Hot roll","price":"R$ 58,00"},{"name":"Posta de Salmão","price":"R$ 40,00","oldPrice":"R$ 46,00"}]},{"title":"Sashimi","items":[{"name":"Sashimi de salmão (12 un.)","price":"R$ 42,00"}]},{"title":"Tirashi","items":[{"name":"Tirashi A (salmão, shimeji, kani e pepino)","price":"R$ 49,00"},{"name":"Tirashi B (salmão empanado, shimeji, cream cheese e pepino)","price":"R$ 49,00"},{"name":"Tirashi C (salmão, cream cheese, kani e camarão)","price":"R$ 49,00"}]},{"title":"Doces","items":[{"name":"Jou salmão doce (2 un.)","price":"R$ 7,50"},{"name":"Hot roll doce (8 un.)","price":"R$ 18,50"}]},{"title":"Diversos","items":[{"name":"Molho shoyu sachê Mitsuwa (8 ml)","price":"R$ 0,70"},{"name":"56. Makimono Uramaki camarão empanado (8 un.)","price":"R$ 27,00"},{"name":"55. Makimono Uramaki camarão (8 un.)","price":"R$ 26,00"},{"name":"54. Makimono Uramaki atum (8 un.)","price":"R$ 25,00"},{"name":"53. Makimono Uramaki salmão e cream cheese (8 un.)","price":"R$ 25,50"},{"name":"52. Makimono Uramaki salmão (8 un.)","price":"R$ 24,00"},{"name":"51. Makimono Uramaki skin (8 un.)","price":"R$ 22,00"},{"name":"50. Tekamaki atum (8 un.)","price":"R$ 16,00"},{"name":"49. Hosomaki salmão (8 un.)","price":"R$ 16,00"},{"name":"48. Kappamaki pepino (8 un.)","price":"R$ 13,00"},{"name":"47. Hosomaki kani (8 un.)","price":"R$ 13,00"},{"name":"46. Futomaki atum (8 un.)","price":"R$ 25,00"},{"name":"45. Futomaki salmão (8 un.)","price":"R$ 26,00"},{"name":"44. Niguiri atum (2 un.)","price":"R$ 9,50"},{"name":"43. Niguiri skin (2 un.)","price":"R$ 8,50"},{"name":"42. Niguiri camarão (2 un.)","price":"R$ 10,50"},{"name":"40. Jou salmão (2 un.)","price":"R$ 9,00"},{"name":"Sunomono (110 g)","price":"R$ 10,00"}]},{"title":"Bebidas","items":[{"name":"Chá (330 ml)","price":"R$ 9,50"},{"name":"Chá verde Leão limão","price":"R$ 9,50"},{"name":"Refrigerante (350 ml)","price":"R$ 8,50"},{"name":"Suco Del Valle (350 ml)","price":"R$ 8,50"},{"name":"H2O! (500 ml)","price":"R$ 9,50"},{"name":"Tônica (350 ml)","price":"R$ 7,50"},{"name":"Água mineral (500 ml)","price":"R$ 6,00"},{"name":"Cerveja (long neck)","price":"R$ 12,00"}]},{"title":"Combo Coca-Cola","items":[{"name":"33 · Temaki a escolher + Coca-Cola 350 ml","price":"R$ 55,00","oldPrice":"R$ 58,50"},{"name":"Combo 1 (28 peças) + Coca-Cola 350 ml","price":"R$ 78,50","oldPrice":"R$ 86,00"},{"name":"Obento 1 (salmão grelhado) + Coca-Cola 350 ml","price":"R$ 56,00","oldPrice":"R$ 64,50"}]}],"hours":{"0":null,"1":[{"open":"11:30","close":"21:30"}],"2":[{"open":"11:30","close":"21:30"}],"3":[{"open":"11:30","close":"21:30"}],"4":[{"open":"11:30","close":"21:30"}],"5":[{"open":"11:30","close":"21:30"}],"6":[{"open":"11:30","close":"16:00"},{"open":"18:00","close":"21:30"}]},"days":["domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado"]};
   var KEETA_IOS_APP_LINK = 'https://m.mykeeta.com/marketing/applaunch/index.html?locale=pt-BR&region=BR&openType=appLaunch&url_id=shop_share_link&utm_campaign=merchant&utm_medium=branding&utm_source=organic&utm_content=merchantsharelink&inner_url=sailorc%3A%2F%2Fkeeta.com%2FmarketTransfer%2Fmachpro%3Fmach_bundle_name%3Dmach_pro_sailor_c_shop%26shopId%3D159406190';
   var KEETA_ANDROID_INTENT = 'intent://keeta.com/marketTransfer/machpro?mach_bundle_name=mach_pro_sailor_c_shop&shopId=159406190#Intent;scheme=sailorc;package=com.sankuai.sailor.afooddelivery;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.sankuai.sailor.afooddelivery%26hl%3Dpt_BR;end';
+  var KEETA_DEEP_LINK = 'sailorc://keeta.com/marketTransfer/machpro?mach_bundle_name=mach_pro_sailor_c_shop&shopId=159406190';
+  var KEETA_IOS_STORE = 'https://apps.apple.com/br/app/keeta-delivery-de-comida/id1662451643';
+  var KEETA_PLAY = 'https://play.google.com/store/apps/details?id=com.sankuai.sailor.afooddelivery&hl=pt_BR';
   var MENU = DATA.menu;
   var BUSINESS_HOURS = DATA.hours;
   var DAY_NAMES = DATA.days;
@@ -7035,26 +6847,65 @@
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   };
 
-  /* ---------- link da Keeta por aparelho ----------
-     iOS: universal link oficial da Keeta (m.mykeeta.com/marketing/applaunch) —
-          com o app instalado o iOS abre o app direto; sem o app, mostra a página
-          oficial de download em português.
-     Android: intent:// com scheme oficial sailorc:// — abre o app; sem o app,
-          o Chrome cai automaticamente na Play Store (browser_fallback_url).
-     Desktop/outros: mantém o link padrão (Google Play, nova aba). */
+  /* ---------- link da Keeta por aparelho (fluxo autoderido) ----------
+     Por que não mandamos o visitante para a página applaunch da Keeta:
+     sem o app instalado (ou em Chrome iOS/webviews), os botões dela
+     ("Ir para o app"/"Baixe agora") não funcionam e o visitante fica preso.
+     Fluxo controlado por este site:
+     - iOS: clique tenta abrir o app direto na página do Nagatsu via scheme
+       oficial sailorc:// (rota machpro da loja); se em ~2s o app não assumir,
+       este site redireciona para a App Store. Sem JS, o href é o universal
+       link oficial da Keeta (apenas fallback).
+     - Android: intent:// abre o app; sem o app o Chrome cai na Play Store
+       (browser_fallback_url); em webviews que bloqueiam intent, este site
+       cai na Play Store em ~2,5s.
+     - Desktop/outros: mantém o link padrão (Google Play, nova aba). */
   (function () {
     var ua = navigator.userAgent || '';
     var isIos = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
     var isAndroid = /Android/.test(ua);
-    var href = null;
-    if (isIos) href = KEETA_IOS_APP_LINK;
-    else if (isAndroid) href = KEETA_ANDROID_INTENT;
-    if (!href) return;
+    if (!isIos && !isAndroid) return;
+    var armFallback = function (storeUrl, ms) {
+      var left = false;
+      var onHide = function () { left = true; };
+      var onVisibility = function () { if (document.hidden) left = true; };
+      window.addEventListener('pagehide', onHide);
+      document.addEventListener('visibilitychange', onVisibility);
+      window.setTimeout(function () {
+        window.removeEventListener('pagehide', onHide);
+        document.removeEventListener('visibilitychange', onVisibility);
+        if (!left && !document.hidden) window.location.href = storeUrl;
+      }, ms);
+    };
+    var launchScheme = function (schemeUrl) {
+      var a = document.createElement('a');
+      a.href = schemeUrl;
+      a.style.position = 'fixed';
+      a.style.opacity = '0';
+      a.style.pointerEvents = 'none';
+      document.body.appendChild(a);
+      a.click();
+      window.setTimeout(function () { if (a.parentNode) a.parentNode.removeChild(a); }, 100);
+    };
     var links = document.querySelectorAll('a[data-keeta-store]');
     for (var i = 0; i < links.length; i++) {
-      links[i].setAttribute('href', href);
-      links[i].removeAttribute('target');
-      links[i].removeAttribute('rel');
+      (function (link) {
+        link.removeAttribute('target');
+        link.removeAttribute('rel');
+        if (isIos) {
+          link.setAttribute('href', KEETA_IOS_APP_LINK); // fallback sem JS
+          link.addEventListener('click', function (event) {
+            event.preventDefault();
+            armFallback(KEETA_IOS_STORE, 2000);
+            launchScheme(KEETA_DEEP_LINK);
+          });
+        } else {
+          link.setAttribute('href', KEETA_ANDROID_INTENT);
+          link.addEventListener('click', function () {
+            armFallback(KEETA_PLAY, 2500);
+          });
+        }
+      })(links[i]);
     }
   })();
 
